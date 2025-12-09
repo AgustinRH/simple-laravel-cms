@@ -18,7 +18,7 @@ class Article extends Model
     // Protege contra asignación masiva. Solo estos campos pueden ser llenados con Article::create() o $article->update().
     protected $fillable = [
         'title',
-        'content',
+        'description',
         'user_id' // Clave foránea del autor
     ];
 
