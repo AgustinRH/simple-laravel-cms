@@ -10,9 +10,11 @@
 @section('content')
     <h1>Todos los autores y sus artículos</h1>
 
+    {{-- Itera sobre todos los usuarios (autores) --}}
     @foreach ($authors as $author)
         <h2>{{ $author->name }} (ID: {{ $author->id }})</h2>
 
+        {{-- Verifica si el autor tiene artículos asociados --}}
         @if ($author->articles->isNotEmpty())
             <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; margin-bottom: 20px;">
                 <thead style="background-color: #f0f0f0;">
@@ -23,6 +25,7 @@
                     </tr>
                 </thead>
                 <tbody>
+                    {{-- Itera sobre los artículos de CADA autor --}}
                     @foreach ($author->articles as $article)
                         <tr>
                             <td>{{ $article->title }}</td>
