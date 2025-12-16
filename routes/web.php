@@ -82,7 +82,7 @@ Route::post('/comparar', [NumeroController::class, 'comparar']);
 // Relación: Autor -> Artículos
 Route::get('/author/{id}', [ArticlesController::class, 'showAuthor']);
 
-// Relación: Autores con Artículos (N+1 Problem solved)
+// Relación: Autores con Artículos
 Route::get('/authors', [ArticlesController::class, 'showAllAuthors']);
 
 // Tests varios de Eloquent
